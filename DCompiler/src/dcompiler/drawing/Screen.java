@@ -12,7 +12,18 @@ public class Screen {
     public Screen(int w, int h) {
 	this.w = w;
 	this.h = h;
+	this.image = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
 	this.pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
+    }
+    
+    public void pixel_set(int color, int x, int y) {
+	this.pixels[y * w + x] = color;
+    }
+    
+    public void clear_set(int color) {
+	for (int i = 0; i < pixels.length; i++) {
+	    pixels[i] = color;	    
+	}
     }
     
 }
