@@ -9,14 +9,13 @@ import javax.swing.JFrame;
 
 public class DCompiler extends Canvas implements Runnable {
 
-    public static int _WIDTH = 1000, _HEIGHT = 800;
+    public static int dim_width = 1000, dim_height = 800;
     private boolean running = false;
     
-    // Objects declaration
     private Screen screen;
     
     public DCompiler() {
-        screen = new Screen(_WIDTH, _HEIGHT);
+        screen = new Screen(dim_width, dim_height);
     }
     
     private void start() {
@@ -30,10 +29,10 @@ public class DCompiler extends Canvas implements Runnable {
     
     public static void main(String[] args) {
         DCompiler game = new DCompiler();
-        game.setPreferredSize(new Dimension(_WIDTH, _HEIGHT));
-        game.setMaximumSize(new Dimension(_WIDTH, _HEIGHT));
-        game.setMinimumSize(new Dimension(_WIDTH, _HEIGHT));
-        game.setSize(new Dimension(_WIDTH, _HEIGHT));
+        game.setPreferredSize(new Dimension(dim_width, dim_height));
+        game.setMaximumSize(new Dimension(dim_width, dim_height));
+        game.setMinimumSize(new Dimension(dim_width, dim_height));
+        game.setSize(new Dimension(dim_width, dim_height));
         
         JFrame f = new JFrame("My game");
         f.setResizable(false);
@@ -92,7 +91,7 @@ public class DCompiler extends Canvas implements Runnable {
         }
         
         Graphics g = bs.getDrawGraphics();
-        g.drawImage(screen.image, 0, 0, _WIDTH, _HEIGHT, null);
+        g.drawImage(screen.image, 0, 0, dim_width, dim_height, null);
         g.dispose();
         bs.show();
     }
