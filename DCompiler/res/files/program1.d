@@ -1,15 +1,14 @@
 pack test
-{
-    variabile int numero = 10;
-}
-
-funzione update()
-{
     
-}
+end
+
+funzione draw()
+    
+end
 
 funzione init()
-{
     variabile int timer;
-    program.stack.move("timer", stack.global);
-}
+    timer = 0;
+    drawer.stack.move("timer", stack.global);
+    drawer.print("Hello World");
+end
