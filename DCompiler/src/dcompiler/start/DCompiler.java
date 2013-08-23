@@ -1,11 +1,13 @@
 package dcompiler.start;
 
 import dcompiler.drawing.Screen;
+import dcompiler.io.FileLoader;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+import java.util.Scanner;
 import javax.swing.JFrame;
 
 public class DCompiler extends Canvas implements Runnable {
@@ -98,6 +100,7 @@ public class DCompiler extends Canvas implements Runnable {
     }
 
     public void update() {
+	
     }
 
 }
