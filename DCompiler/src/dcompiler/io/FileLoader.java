@@ -8,10 +8,13 @@ import java.util.Scanner;
 
 public class FileLoader { 
     
+    /**
+    getResourceFile("files\\program.d");
+    */
     public static String[] getResourceFile(String file) {
 	Scanner scan;
 	try {
-	    scan = new Scanner(new FileReader(file));
+	    scan = new Scanner(new FileReader("res\\" + file));
 	} catch (IOException e) {
 	    return null;
 	}	
